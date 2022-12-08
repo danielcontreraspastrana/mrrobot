@@ -31,18 +31,21 @@ body {background-color: #000000;
         background-color: black;
 }
 
-section { padding: 0 0;
+section { padding: 2% 0;
 }
 
 
-/*** BARRA NAVEGACION ***/
+
+
+
+/************************************************** BARRA NAVEGACION ***************************************************/
 nav {   position: sticky;
         top: 0;
         z-index: 999;} 
         
 /* Add a black background color to the top navigation */
 .topnav {
-        background-color: #a90300d3;
+        background-color: #b50003b6;
         overflow: hidden;
 }
       /* Style the links inside the navigation bar */
@@ -95,46 +98,44 @@ nav {   position: sticky;
                         text-align: left;}
 }
 
-/*** BORDERS and TITLES SECTIONS ***/
-
-section {       border-bottom: groove 5px rgb(129, 129, 129);
-}
-
+/*** TITLES SECTIONS ***/
 
 
 .tituloseccion h1{      font-family: texto;
-                        font-size: 4rem;
-                        color: #AA0000;
-                        text-align: center;
-                        margin: auto;
-                        width: 100%;
-                        border-bottom: groove 5px rgb(129, 129, 129);
-                        padding: 5px 0;
+        font-size: 4rem;
+        color: #ffffff;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 5%;
+
 
 }
 
-/*** HERO SECTION ***/
+/*********************************************** HERO SECTION ***********************************************/
 
 #herosection {  background-image: url(../images/backgroundhero.jpg);
                 height: 100vh;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                margin-bottom: 10%;
+                margin-bottom: 5%;
+                border-bottom: solid 3px white;
+
 
 }
 
-/*** ABOUT SECTION ***/
+/************************************************ABOUT SECTION **********************************************/
 
-#grid4about {   display: grid;
+.grid2 {   display: grid;
                 grid-template-columns: 50% 50%;
                 font-size: 1.5rem;
-                padding-top: 5%;
-                margin-bottom: 10%;
+
 
 }
 
-.col4 img {     width: 100%;
+.col2 img {     width: 100%;
                 padding: 5%;
 
                 margin: auto;
@@ -147,7 +148,7 @@ section {       border-bottom: groove 5px rgb(129, 129, 129);
                 color: white;
                 font-size: 2.5rem;
                 /*text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 10px rgb(218, 213, 213);*/
-                border-left: solid 5px #AA0000;
+                border-left: solid 5px #aa0000;
                 padding-left: 15px;
                 margin-left: 10%;
 }
@@ -181,14 +182,15 @@ section {       border-bottom: groove 5px rgb(129, 129, 129);
 
 
 
-/*** ACTORS SECTION***/
+/********************************************* ACTORS SECTION *************************************************/
 
-#sectionactors {margin-bottom: 10%;}
 
-#grid6 {display: grid;
-        grid-template-columns: 33% 33% 33%;}
 
-.card {
+.grid3 {display: grid;
+        grid-template-columns: auto auto auto;    
+}
+
+.cardcol3 {
                 box-shadow: 0 4px 8px 0 rgb(185, 185, 185);
                 max-width: 300px;
                 margin: auto;
@@ -198,12 +200,12 @@ section {       border-bottom: groove 5px rgb(129, 129, 129);
                 padding-bottom: 10px;
                 margin-bottom: 20px;
 }
-              
+
 .title {
                 color: grey;
                 font-size: 18px;
-              }
-              
+}
+
 button {        
                 border: none;
                 outline: 0;
@@ -232,7 +234,7 @@ button:hover, a:hover {
                 color: white;
               }
 
-/*** GALLERY SECTION ***/
+/**************************************************** GALLERY SECTION **********************************************/
 /*** videos ***/
 
 .container {
@@ -254,7 +256,7 @@ button:hover, a:hover {
                 margin: auto;
               }
 
-.titulosmultimedia { font-family: texto;
+.titulosseasons { font-family: texto;
                 font-size: 2rem;
                 color: black;
                 width: 40%;
@@ -262,10 +264,6 @@ button:hover, a:hover {
                 margin-top: 5%;
                 text-align: center;
                 background-color: white;
-}
-
-#col4videos {display: grid;
-        grid-template-columns: 50% 50%;
 }
 
 #primevideo img{margin-left: 43%;
@@ -277,30 +275,115 @@ button:hover, a:hover {
                 color: white;
                 text-align: center;}
 
-/***GALLERY SECTION ***/
+/**************************************************** GALLERY SECTION *****************************************/
 
+/* Position the image container (needed to position the left and right arrows) */
+.gallerycontainer {
+  position: relative;
+  width: 60%;
+  margin: 100px auto;
 
-
-/*** FOOTERS ***/
-
-/************** FOOTER  **************************************/
-footer { background-color: black;}
-
-#grid3 {        display: grid;
-                grid-template-columns: 25% 25% 50%;
-                font-family: texto;
-                font-size: 1.3rem;
 }
 
-.col3 {padding: 8%;}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+/********************************************************* FOOTERS  ********************************************/
+footer { background-color: black;
+        padding-top: 5%;
+        border-top: solid 5px rgba(255, 255, 255, 0.747);}
+
 
 .col3 img {     width: 80%; /* para que no se salga del cuadro de la columna*/
                 display: block; /* la convierto en un bloque*/
                 margin: auto; /*la centra dentro de la columna*/
 }
 
+#navinferior {padding: 10%;}
+
+#navinferior a {font-family: texto;
+                font-size: 1.6rem;
+}
+
+
 #ancha {padding: 3%;
-        color: white;}
+        color: white;
+        font-family: texto;
+        text-align: center;}
 
 /* Style all font awesome icons */
 .fa {box-sizing: content-box;
@@ -355,7 +438,7 @@ footer { background-color: black;}
         
         #herosection {background-image: url(../images/backgroundherotablet.jpg);
         background-size: auto;}
-        #grid4about {grid-template-columns: 100%;
+        .grid2 {grid-template-columns: 100%;
                         width: 80%;}
         .subtitulos2 {font-size: 2.5rem;}
         .subtitulos2 h1 {font-size: 2.5rem;}
@@ -363,11 +446,12 @@ footer { background-color: black;}
 
         .tituloseccion h1{font-family: texto;
                 font-size: 2rem;}
-        #grid6 {grid-template-columns: 50% 50%;}     
-        #grid3 {grid-template-columns: 100%;}
+        .grid3 {grid-template-columns: 50% 50%;}
         .col3 {margin: auto;}
         .moreinfo a{ font-size: 0.8rem;}
-        .titulosmultimedia { font-size: 1rem;}
+        .titulosseasons { font-size: 1rem;}
+        #navinferior a {font-size: 1.2rem;
+}
 }
 
 
@@ -378,16 +462,16 @@ footer { background-color: black;}
                         background-size: 100%;}
         #wrapper {width: 100%;}
         .titulosecciones{ font-size: 3rem;}
-        #grid4about{width: 95%;}
+        .grid2{width: 95%;}
         .subtitulos2 h1 {padding-left: 10px;}
         #derecha {margin-left: 45%;}
         .definiciones {font-size: 0.9rem;}
         .subtitulos {font-size: 1.2rem;}
         .subtitulos2 p{font-size: 0.9rem;}
-        #grid6 {grid-template-columns: 100%;}
-        .titulosmultimedia { font-size: 0.8rem;}
-        #col4videos {display: grid;
-                grid-template-columns: 100%;}
-
+        .grid3 {grid-template-columns: 100%;}
+        .titulosseasons { font-size: 0.8rem;}
+        .gallerycontainer { width: 85%;
+ 
+              }
 
 }
