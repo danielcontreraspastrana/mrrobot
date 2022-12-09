@@ -22,7 +22,8 @@
 html { scroll-behavior: smooth; /*** Para que la transicion se haga fluidamente barra nav***/
 }
 
-body {background-color: #000000;
+body {background: rgb(158,48,48);
+  background: radial-gradient(circle, rgba(158,48,48,1) 0%, rgba(0,0,0,1) 46%);
         
 }
 
@@ -109,6 +110,7 @@ nav {   position: sticky;
         width: 100%;
         padding: 5px 0;
         margin-bottom: 5%;
+        background-color: #aa010473;
 
 
 }
@@ -443,7 +445,6 @@ footer { background-color: black;
         .subtitulos2 {font-size: 2.5rem;}
         .subtitulos2 h1 {font-size: 2.5rem;}
         #titulotrailer { font-size: 1.5rem;}
-
         .tituloseccion h1{font-family: texto;
                 font-size: 2rem;}
         .grid3 {grid-template-columns: 50% 50%;}
