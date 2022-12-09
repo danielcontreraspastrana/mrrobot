@@ -133,6 +133,7 @@ nav {   position: sticky;
 .grid2 {   display: grid;
                 grid-template-columns: 50% 50%;
                 font-size: 1.5rem;
+                margin: auto;
 
 
 }
@@ -253,8 +254,8 @@ button:hover, a:hover {
                 left: 0;
                 bottom: 0;
                 right: 0;
-                width: 60%;
-                height: 60%;
+                width: 80%;
+                height: 80%;
                 margin: auto;
               }
 
@@ -471,8 +472,7 @@ footer { background-color: black;
         .subtitulos2 p{font-size: 0.9rem;}
         .grid3 {grid-template-columns: 100%;}
         .titulosseasons { font-size: 0.8rem;}
-        .gallerycontainer { width: 85%;
- 
-              }
+        .gallerycontainer { width: 85%;}
+        .responsive-iframe { width: 100%;}
 
 }
